@@ -36,4 +36,8 @@
     @empty
         <p>No posts found.</p>
     @endforelse
+    {{-- Pagination Links --}}
+    <div class="d-flex justify-content-center mt-4">
+        {{ $posts->links() }}
+    </div>
 @endsection

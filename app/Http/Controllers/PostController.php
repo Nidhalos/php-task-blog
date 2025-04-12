@@ -15,8 +15,9 @@ class PostController extends Controller
               ->orWhere('content', 'like', '%' . $request->search . '%');
     }
     
-    $posts = $query->get();
-    
+    //$posts = $query->get();
+    $posts = $query->paginate(2); 
+
     return view('posts.index', compact('posts'));
 }
 
